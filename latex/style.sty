@@ -1,0 +1,169 @@
+\ProvidesPackage{style}
+\newenvironment{king}{\begin{quote}}{\end{quote}}
+
+\newcommand*{\Aut}{\mathop{{\rm Aut}}\nolimits}
+\newcommand*{\Int}{\mathop{{\rm Int}}\nolimits}
+\newcommand*{\Inn}{\mathop{{\rm Inn}}\nolimits}
+\newcommand*{\Out}{\mathop{{\rm Out}}\nolimits}
+\newcommand*{\End}{\mathop{{\rm End}}\nolimits}
+\newcommand*{\Hom}{\mathop{{\rm Hom}}\nolimits}
+\newcommand*{\diag}{\mathop{{\rm diag}}\nolimits}
+\newcommand*{\Gdim}{\mathop{{\rm Gdim}}\nolimits}
+
+\newcommand*{\J}{\mathop{{\rm Jac}}\nolimits}
+\newcommand*{\Jac}{\mathop{{\rm Jac}}\nolimits}
+
+\newcommand*{\GF}{\mathop{{\rm GF}}\nolimits}
+
+\newcommand*{\RP}{\mathbb{R}P}
+
+%matrix:
+\newcommand*{\rank}{\mathop{{\rm rank}}\nolimits}
+%\newcommand*{\O}{\mathop{{\rm O}}\nolimits}
+\newcommand*{\M}{\mathop{{\rm M}}\nolimits}
+\newcommand*{\GL}{\mathop{{\rm GL}}\nolimits}
+\newcommand*{\SL}{\mathop{{\rm SL}}\nolimits}
+\newcommand*{\SO}{\mathop{{\rm SO}}\nolimits}
+\newcommand*{\SU}{\mathop{{\rm SU}}\nolimits}
+\newcommand*{\PGL}{\mathop{{\rm PGL}}\nolimits}
+\newcommand*{\PSL}{\mathop{{\rm PSL}}\nolimits}
+\newcommand*{\PSU}{\mathop{{\rm PSU}}\nolimits}
+\newcommand*{\PSO}{\mathop{{\rm PSO}}\nolimits}
+\newcommand*{\PSp}{\mathop{{\rm PSp}}\nolimits}
+\newcommand*{\Syl}{\mathop{{\rm Syl}}\nolimits}
+
+%group theory
+\newcommand*{\ord}{\mathop{{\rm ord}}\nolimits}
+\newcommand*{\sgn}{\mathop{{\rm sgn}}\nolimits}
+\newcommand*{\Sym}{\mathop{{\rm Sym}}\nolimits}
+\newcommand*{\Alt}{\mathop{{\rm Alt}}\nolimits}
+\renewcommand*{\Im}{\mathop{{\rm Im}}\nolimits}
+\newcommand*{\im}{\mathop{{\rm im}}\nolimits}
+\newcommand*{\Ker}{\mathop{{\rm Ker}}\nolimits}
+\newcommand*{\id}{\mathop{{\rm id}}\nolimits}
+\newcommand*{\tr}{\mathop{{\rm tr}}\nolimits}
+
+%number theory
+\newcommand*{\GCD}{\mathop{{\rm GCD}}\nolimits}
+\newcommand*{\LCM}{\mathop{{\rm LCD}}\nolimits}
+\newcommand*{\St}{\mathop{{\rm St}}\nolimits}
+
+\newcommand*{\ov}{\overline}
+\newcommand*{\seq}{\subseteq}
+\newcommand*{\sep}{\supseteq}
+\newcommand*{\sm}{\setminus}
+\newcommand*{\sq}{\sqrt}
+\newcommand*{\bsm}{\left(\begin{smallmatrix}}
+\newcommand*{\esm}{\end{smallmatrix}\right)}
+\newcommand*{\bp}{\begin{pmatrix}}
+\newcommand*{\ep}{\end{pmatrix}}
+\newcommand*{\ovs}{\overset}
+\newcommand*{\fty}{\infty}
+\newcommand*{\wg}{\wedge}
+\newcommand*{\wh}{\widehat}
+\newcommand*{\wt}{\widetilde}
+\newcommand*{\wL}{\widetilde{\Lam}}
+
+\newcommand*{\cal}{\mathcal}
+
+%\renewcommand*{\S}{Section}
+
+\newcommand*{\lan}{\langle}
+\newcommand*{\ran}{\rangle}
+%\newcommand*{\Prih}{{Prihoda}}
+\newcommand*{\Pri}{P\v{r}\'ihoda\,}
+
+\newcommand*{\La}{\Leftarrow}
+\newcommand*{\Ra}{\Rightarrow}
+\newcommand*{\lr}{\leftrightarrow}
+\newcommand*{\la}{\longrightarrow}
+\newcommand*{\xl}{\xleftarrow}
+\newcommand*{\xr}{\xrightarrow}
+
+\newcommand*{\al}{\alpha}
+\newcommand*{\be}{\beta}
+\newcommand*{\ga}{\gamma}
+\newcommand*{\del}{\delta}
+\renewcommand*{\phi}{\varphi}
+
+\newcommand*{\lt}{\left}
+\newcommand*{\rt}{\right}
+\renewcommand{\baselinestretch}{1.3}
+\newcommand*{\eps}{\varepsilon}
+
+\newcommand*{\nb}{\vec{\nabla}}
+
+
+% MY:
+
+\newcommand*{\defn}{~\overset{\mathrm{def}}{\Longleftrightarrow}~}
+\newcommand*{\imp}{\Longrightarrow}
+
+\renewcommand*{\iff}{~\Leftrightarrow~}
+\newcommand*{\then}{~\Rightarrow~}
+\newcommand*{\norm}{\triangleleft}   % нормальная подгруппа
+\newcommand*{\maxsubgroup}{\underset{\textrm{max}}{<}}  
+\newcommand*{\maxnorm}{\underset{\textrm{max}}{\triangleleft}}  
+\newcommand*{\mimnorm}{\underset{\textrm{min}}{\triangleleft}}  
+\newcommand*{\semidir}{\leftthreetimes} 
+\newcommand*{\semidr}{\mathbb{o}} 
+
+
+\newcommand*{\F}{\mathbb{F}}
+\newcommand*{\N}{\mathbb{N}}
+\newcommand*{\Z}{\mathbb{Z}}
+\newcommand*{\Q}{\mathbb{Q}}
+\newcommand*{\R}{\mathbb{R}}
+\renewcommand*{\C}{\mathbb{C}}
+\newcommand*{\Zp}{\widehat{\mathbb{Z}}_p}
+
+\newcommand*{\setN}{\mathbb{N}}  
+\newcommand*{\setZ}{\mathbb{Z}}  
+\newcommand*{\setQ}{\mathbb{Q}}  
+\newcommand*{\setR}{\mathbb{R}}  
+\newcommand*{\setC}{\mathbb{C}}  
+\newcommand*{\setH}{\mathbb{H}}  
+\newcommand*{\setP}{\mathbb{P}}  
+\newcommand*{\setI}{\mathbb{I}}  
+
+\newcommand*{\grad}{\operatorname{grad}}  
+\newcommand*{\rot}{\operatorname{rot}}  
+\renewcommand*{\div}{\operatorname{div}}  
+\newcommand*{\laplas}{\triangle}  
+
+\newcommand*{\inject}{\hookrightarrow} 
+\newcommand*{\surject}{\twoheadrightarrow} 
+
+\newcommand*{\we}{\wedge}  
+
+
+% для дискретной математики:
+\newcommand*{\nx}{\bar{x}}
+\newcommand*{\ny}{\bar{y}}
+\newcommand*{\nz}{\bar{z}}
+\newcommand*{\nnx}{\bar{\bar{x}}}
+\newcommand*{\nny}{\bar{\bar{y}}}
+\newcommand*{\nnz}{\bar{\bar{z}}}
+\newcommand*{\nA}{\bar{A}}
+\newcommand*{\nB}{\bar{B}}
+\newcommand*{\nC}{\bar{C}}
+
+\newcommand*{\AND}{~\wedge~}  
+\newcommand*{\OR}{~\vee~}  
+\newcommand*{\darr}{\downarrow}
+\newcommand*{\op}{\oplus}
+\newcommand*{\xor}{\oplus}
+\newcommand*{\XOR}{\oplus}
+\newcommand*{\eqv}{\leftrightarrow} 
+
+\newcommand*{\ev}{~\equiv~}
+
+\newcommand*{\bd}{\textbf}
+\newcommand*{\il}{\textit}
+
+%\newcommand*{\eq}{\preccurlyeq} 
+
+%$\preccurlyeq$
+%$\prec$.
+
+

@@ -1,0 +1,78 @@
+\documentclass[a4paper,14pt,reqno,oneside]{amsart}
+\usepackage[14pt]{extsizes}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1.7cm,bindingoffset=0cm]{geometry}
+\usepackage[russian]{babel}
+\usepackage[all,arc]{xy}
+\usepackage[all]{xy}
+\usepackage{latexsym,amssymb,amsmath}
+%\usepackage{datetime}
+\usepackage{comment}
+\usepackage{style}
+
+\usepackage{showkeys} 
+
+%\usepackage{graphicx} 
+\usepackage{graphics} 
+\usepackage[pngtex]{graphicx} 
+
+\usepackage{enumitem} % нужно, чтобы убрать лишние пробелы между строками в item
+\setlist{nolistsep} % нужно, чтобы убрать лишние пробелы между строками в item
+%\usepackage{microtype} % улучшение форматирования текста (раб. только в линуксе)
+
+\usepackage{color} %% это для отображения цвета в коде
+\usepackage{xcolor}
+\usepackage{listings}
+%\lstdefinestyle{sharpc}{language=[Sharp]C, frame=lr, rulecolor=\color{blue!80!black}}
+
+\usepackage{caption}
+
+% Заголовок кода:
+%\DeclareCaptionFont{white}{\color{сaptiontext}}
+\DeclareCaptionFont{white}{\color{darkgray}} 
+\DeclareCaptionFormat{listing}{\colorbox{white}{\parbox{\textwidth}{#1#2#3}}}
+%\DeclareCaptionFormat{listing}{\parbox{\linewidth}{\colorbox{сaptionbk}{\parbox{\linewidth}{#1#2#3}}\vskip-4pt}}
+
+\captionsetup[lstlisting]{format=listing ,labelfont=white, textfont=white}
+\renewcommand{\lstlistingname}{Код} % Переименование Listings в нужное именование структуры
+
+% Цвета для кода
+ 
+\definecolor{string}{HTML}{B40000} % цвет строк в коде
+\definecolor{comment}{HTML}{008000} % цвет комментариев в коде
+\definecolor{keyword}{HTML}{1A00FF} % цвет ключевых слов в коде
+%\definecolor{keys}{HTML}{0000000} % цвет ключевых слов в коде
+\definecolor{morecomment}{HTML}{8000FF} % цвет include и других элементов в коде
+\definecolor{сaptiontext}{HTML}{FFFFFF} % цвет текста заголовка в коде
+\definecolor{сaptionbk}{HTML}{999999} % цвет фона заголовка в коде
+\definecolor{bk}{HTML}{FFFFFF} % цвет фона в коде
+\definecolor{frame}{HTML}{999999} % цвет рамки в коде
+\definecolor{brackets}{HTML}{B40000} % цвет скобок в коде
+
+% Для отображения кода формата xml
+\lstdefinelanguage{XML}
+{
+	morestring=[s]{"}{"},
+	morecomment=[s]{?}{?},
+	morecomment=[s]{!--}{--},
+	commentstyle=\color{comment},
+	moredelim=[s][\color{black}]{>}{<},
+	moredelim=[s][\color{red}]{\ }{=},
+	stringstyle=\color{string},
+	identifierstyle=\color{keyword}
+}
+
+% http://mydebianblog.blogspot.com.by/2012/12/latex.html  
+%    cat -n code.c | fold -w 60    Такая комбинация берёт исходный код в файле code.c и расставляет номера строк (ключ -n),
+% http://blog.harrix.org/?p=641
+
+%\newcommand*{\true}{ \begin{verbatim}true\end{verbatim} } 
+
+
+\input{style_thm.tex}
+
+
+% диаграммы
+%\usepackage{tikz} 
+
+
+

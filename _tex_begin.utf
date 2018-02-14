@@ -1,0 +1,29 @@
+%\documentclass{article}
+\documentclass[a4paper,oneside,12pt]{amsart}
+\usepackage[left=1.1cm,right=1.1cm,top=2cm,bottom=1cm,bindingoffset=0cm]{geometry}
+%----------- fonts
+\usepackage[english,russian]{babel}
+\usepackage{fontspec}
+\setmainfont{CMU Serif}
+\usepackage{xeCJK}
+\setCJKmainfont{TakaoMincho} % for \rmfamily
+%------- another packages:
+\usepackage{braket}
+\usepackage{hyperref}
+%------- page settings:
+\usepackage{setspace} 
+\setstretch{1.17} %\linespread{1.5}
+%------ the document begins:
+\begin{document}
+\setcounter{secnumdepth}{0}
+\vspace{-9mm}
+\title{A STUDY IN SCARLET} \maketitle
+\vspace{-2mm}
+
+\begin{center}
+\emph{by Arthur Conan Doyle}
+\end{center}
+\section{Part 1, Chapter 1: Mr. Sherlock Holmes}
+\vspace{4mm}
+
+

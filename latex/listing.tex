@@ -1,0 +1,94 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{color} %% это для отображения цвета в коде
+%\usepackage{xcolor} %% это для отображения цвета в коде
+\usepackage{listings} %% собственно, это и есть пакет listings
+\usepackage{caption}
+  \DeclareCaptionFont{white}{\color{white}} %% это сделает текст заголовка белым
+    %% код ниже нарисует серую рамочку вокруг заголовка кода.
+    \DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+    \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+% http://mydebianblog.blogspot.com.by/2012/12/latex.html  
+%    cat -n code.c | fold -w 60    Такая комбинация берёт исходный код в файле code.c и расставляет номера строк (ключ -n),
+
+
+% диаграммы
+%\usepackage{tikz} 
+
+\begin{document}
+
+%\lstset{style=sharpc}
+
+\lstset{ %
+language=C,                 % выбор языка для подсветки (здесь это С)
+basicstyle=\small\sffamily, % размер и начертание шрифта для подсветки кода
+numbers=left,               % где поставить нумерацию строк (слева\справа)
+numberstyle=\tiny,           % размер шрифта для номеров строк
+stepnumber=1,                   % размер шага между двумя номерами строк
+numbersep=5pt,                % как далеко отстоят номера строк от подсвечиваемого кода
+backgroundcolor=\color{white}, % цвет фона подсветки - используем \usepackage{color}
+showspaces=false,            % показывать или нет пробелы специальными отступами
+showstringspaces=false,      % показывать или нет пробелы в строках
+showtabs=false,             % показывать или нет табуляцию в строках
+frame=single,              % рисовать рамку вокруг кода
+tabsize=2,                 % размер табуляции по умолчанию равен 2 пробелам
+captionpos=t,              % позиция заголовка вверху [t] или внизу [b] 
+breaklines=true,           % автоматически переносить строки (да\нет)
+breakatwhitespace=false, % переносить строки только если есть пробел
+escapeinside={\%*}{*)}   % если нужно добавить комментарии в коде
+}
+
+\begin{lstlisting}[label=some-code,caption=Some Code]
+
+namespace VarzovVI_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double x, y, z;
+           
+            Console.WriteLine("Введите X:");
+            x = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Введите Y:");
+            y = Double.Parse(Console.ReadLine());
+           
+
+            Console.WriteLine("Введите Z:");
+            z = Convert.ToDouble(Console.ReadLine());
+      
+            double a = (3 + Math.E) / (1 + x * x);
+            double b = 1 + Math.Pow(x, 3) + (Math.Pow(Math.Abs(y - x), 3) / 3);
+
+            Console.WriteLine("a = " + a + "\tb = " + b);
+            Console.WriteLine("a = {0:G5}\tb = {1:f2}", a, b);
+            Console.WriteLine("a = {0:0.0000}\tb = {1:#.###}", a, b);
+
+        }
+    }
+
+
+}
+\end{lstlisting}
+
+     \begin{verbatim}
+    int main(void)
+    {
+    int i, j;
+
+    for (i=0; i<3; ++i) {
+    for (j=0; j<3; ++j) printf("%5.1f", m[i*3+j]);
+    putchar('\n');
+    }
+
+    cblas_dgemv(CblasRowMajor, CblasNoTrans, 3, 3, 1.0, m, 3, x, 1, 0.0, y, 1);
+
+
+    for (i=0; i<3; ++i) printf("%5.1f\n", y[i]);
+
+    return 0;
+    }
+    \end{verbatim}
+
+\end{document} 

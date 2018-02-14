@@ -1,0 +1,72 @@
+% стили для теорем
+
+\newtheoremstyle{plain1}% name
+  {9pt}%      Space above, empty = `usual value'
+  {9pt}%      Space below
+  {\itshape}% Body font
+  {\parindent}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {.}%        Punctuation after thm head
+  {.5em}% Space after thm head: \newline = linebreak
+  {}%         Thm head spec
+\theoremstyle{plain1}
+
+\newtheoremstyle{definition1}% name
+  {9pt}%      Space above, empty = `usual value'
+  {9pt}%      Space below
+  {} % Body font
+  {\parindent}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {.}%        Punctuation after thm head
+  {.5em}% Space after thm head: \newline = linebreak
+  {}%         Thm head spec
+\theoremstyle{definition1}
+
+\newtheoremstyle{remark1}% name
+  {9pt}%      Space above, empty = `usual value'
+  {9pt}%      Space below
+  {} % Body font
+  {\parindent}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\itshape}% Thm head font
+  {.}%        Punctuation after thm head
+  {.5em}% Space after thm head: \newline = linebreak
+  {}%         Thm head spec
+\theoremstyle{remark1}
+
+\theoremstyle{plain1}  % курсив
+
+
+%\ifAVTOREF
+%\newtheorem{theorem}{Теорема}[section]
+%\esle
+%\newtheorem{theorem}{Теорема}[section]
+%\fi
+
+\ifx \avtoref \undefined
+	\newtheorem{theorem}{Теорема}[section]  % для диссера	
+\else	
+	\newtheorem{theorem}{Теорема}		% для автореферата
+\fi
+
+	\theoremstyle{plain1}  % курсив
+	\newtheorem{predl}[theorem]{Предложение}
+	\newtheorem{lemma}[theorem]{Лемма}
+	\newtheorem{cor}[theorem]{Следствие}
+	\newtheorem{conj}[theorem]{Гипотеза}
+	\newtheorem{ques}[theorem]{Вопрос}
+	\newtheorem{probl}[theorem]{Проблема}
+	\newtheorem{fact}[theorem]{Факт}
+	\newtheorem{stat}[theorem]{Утверждение} 
+
+	\theoremstyle{definition1}  % прямой шрифт
+	\newtheorem{defin}[theorem]{Определение}  
+	\newtheorem{example}[theorem]{Пример}
+	\newtheorem{remark}[theorem]{Замечание}
+
+
+
+%\renewcommand{\proofname}{Док-во} 
+\renewcommand{\proofname}{Доказательство} 
+%\renewenvironment{proof}{\par\textit{Доказательство.}}{\hfill $\qed$ \vspace{2mm}} --- возникает проблема, когда пишется док-во ЧЕГО
+
+
